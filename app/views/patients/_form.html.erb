@@ -1,13 +1,15 @@
 <%= form_for(@patient) do |f| %>
-<%= f.collection_select(:doctor_id, Doctor.all, :id, :name, {prompt: "Choose Doctor" }) %><br>
-     <%= f.label :name %><br>
-     <%= f.text_field :name, placeholder: "Enter patient name" %><br>
-     <%= f.label :age %><br>
-     <%= f.number_field :age %>
-     <%= f.label :oxygenlevel %><br>
-     <%= f.number_field :oxygenlevel %>
-     <%= f.label :notes %><br>
-     <%= f.text_area :notes, placeholder: "Type the patient notes here" %><br>
+<div class = "form-group">
+  <%= f.collection_select(:doctor_id, Doctor.all, :id, :name, {prompt: "Choose Doctor" }) %><br>
+       <%= f.label :name %><br>
+       <%= f.text_field :name, placeholder: "Enter patient name", class: 'form-control' %><br>
+       <%= f.label :age %><br>
+       <%= f.number_field :age %><br>
+       <%= f.label :oxygenlevel %><br>
+       <%= f.number_field :oxygenlevel, class: 'form-control' %><br>
+       <%= f.label :notes %><br>
+       <%= f.text_area :notes, placeholder: "Type the patient notes here", class: 'form-control' %><br>
 
-     <%= f.submit %>
+       <%= f.submit 'Update Patient', class: 'btn btn-success'%>
+   </div>
 <% end %>

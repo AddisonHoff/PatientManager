@@ -22,30 +22,40 @@ class PatientsController < ApplicationController
 
   def create
     @patient = Patient.new(patient_params)
-    if @patient.save
-      flash[:success] = "The patient was created!"
-      redirect_to @patient
-        else
-          render 'new'
-      end
-   end
+    respond_to do |format|
+         if @patient.save
+           format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+           format.json { render :show, status: :created, location: @patient }
+         else
+           format.html { render :new }
+           format.json { render json: @patient.errors, status: :unprocessable_entity }
+         end
+       end
+     end
 
   def edit
   end
 
   def update
-     if @patient.update(patient_params)
-          flash[:success] = "The patient was updated"
-          redirect_to @patient
-     else
-          render 'edit'
-     end
-   end
-def destroy
-   @patient.destroy
-   flash[:success] = "The patient was destroyed"
-   redirect_to root_path
- end
+    respond_to do |format|
+      if @patient.update(post_params)
+        format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }
+        format.json { render :show, status: :ok, location: @patient }
+      else
+        format.html { render :edit }
+        format.json { render json: @patient.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+      @patient.destroy
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'Patient was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    end
+  
 
   private
 

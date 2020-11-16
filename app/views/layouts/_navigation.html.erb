@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark navbar-static-top navbar-expand-md">
+    <div class="container">
+        </button> <%= link_to "Patient Manager", root_path, class: 'navbar-brand' %>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav mr-auto">
+            <% Doctor.all.each do |doctor| %>
+            <li>
+              <%= link_to doctor.name, patients_path(category: doctor.name) %>
+            </li>
+            <% end %>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

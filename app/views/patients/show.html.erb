@@ -1,6 +1,21 @@
-<h1><%= @patient.name %></h1>
-<h2><%= @patient.age %></h2>
-<h2><%= @patient.oxygenlevel %></h2>
-<p><%= @patient.notes %></p>
-<%= link_to "Edit", edit_patient_path(@patient) %>
-<%= link_to "Delete", @patient, method: :delete, data: { confirm: "Are you sure?" }%>
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3><%= @patient.name %></h1>
+      <h3><%= "Age: " + (@patient.age).to_s %></h2>
+      <h3><%= "Oxygen Level: " + (@patient.oxygenlevel).to_s %></h2>
+
+      <p>
+        <br>
+        <%= @patient.notes %>
+        <br>
+
+      </p>
+    </div>
+
+  </div>
+  <%= link_to "Edit", edit_patient_path(@patient) %>
+  <%= link_to "Delete", @patient, method: :delete, data: { confirm: "Are you sure?" }%>
+
+</div>

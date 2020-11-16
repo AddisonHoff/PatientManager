@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render 'shared/nav' %>
-    <title>PatientManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +13,11 @@
   </head>
 
   <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+
+
     <%= yield %>
 
   </body>
