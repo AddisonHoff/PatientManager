@@ -1,0 +1,10 @@
+<% if @patient.errors.any? %>
+     <div>
+          <p><%= pluralize(@patient.errors.count, "error") %> prevented this patient from saving.</p>
+          <ul>
+               <% @patient.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+               <% end %>
+          </ul>
+     </div>
+<% end %>

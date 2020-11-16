@@ -4,7 +4,12 @@ class PatientsController < ApplicationController
 
 
   def index
-    @patients = Patients.all
+  if params[:doctor].blank?
+    @patient = Patient.all.order("created_at DESC")
+    else
+    @doctor_id = Doctor.find_by(name: params[:doctor]).id
+    @patients = Patient.where(category_id: @doctor_id).order("created_at DESC")
+    end
   end
 
   def show

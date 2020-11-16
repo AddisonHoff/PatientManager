@@ -1,0 +1,13 @@
+<%= form_for(@patient) do |f| %>
+     <%= f.collection_select(:doctor_id, Doctor.all, :id, :name, {prompt: “Choose a doctor }) %><br>
+     <%= f.label :name %><br>
+     <%= f.text_field :name, placeholder: “Type the patient name here” %><br>
+     <%= f.label :age %><br>
+     <%= f.number_field :age %>
+     <%= f.label :oxygenlevel %><br>
+     <%= f.number_field :oxygenlevel %>
+     <%= f.label :notes %><br>
+     <%= f.text_area :notes, size: “60x12”, placeholder: “Type the patient notes here” %><br>
+
+     <%= f.submit %>
+<% end %>
