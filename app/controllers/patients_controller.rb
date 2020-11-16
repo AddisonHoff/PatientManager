@@ -4,8 +4,9 @@ class PatientsController < ApplicationController
 
 
   def index
+    # @patients = Patient.all
   if params[:doctor].blank?
-    @patient = Patient.all.order("created_at DESC")
+    @patients = Patient.all.order("created_at DESC")
     else
     @doctor_id = Doctor.find_by(name: params[:doctor]).id
     @patients = Patient.where(category_id: @doctor_id).order("created_at DESC")
@@ -22,10 +23,11 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
     if @patient.save
-             redirect_to @patient, notice: “The patient was created!”
+      flash[:success] = "The patient was created!"
+      redirect_to @patient
         else
-             render ‘new’
-        end
+          render 'new'
+      end
    end
 
   def edit
@@ -33,16 +35,17 @@ class PatientsController < ApplicationController
 
   def update
      if @patient.update(patient_params)
-          redirect_to @patient, notice: “Update successful”
+          flash[:success] = "The patient was updated"
+          redirect_to @patient
      else
-          render ‘edit’
+          render 'edit'
      end
-end
-
+   end
 def destroy
    @patient.destroy
-   redirect_to root_path, notice: Patient destroyed”
-end
+   flash[:success] = "The patient was destroyed"
+   redirect_to root_path
+ end
 
   private
 
@@ -54,4 +57,5 @@ end
   def find_patient
     @patient = Patient.find(params[:id])
   end
+
 end

@@ -1,4 +1,4 @@
 <% @patients.each do |patient| %>
-     <h1><%= link_to "patient.name", patient %></h1>
+     <h1><%= link_to patient.name, patient %></h1>
      <p><%= patient.notes %></p>
 <% end %>

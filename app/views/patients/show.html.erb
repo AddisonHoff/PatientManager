@@ -1,7 +1,6 @@
 <h1><%= @patient.name %></h1>
-<h2><%= @patient.email %></h2>
 <h2><%= @patient.age %></h2>
 <h2><%= @patient.oxygenlevel %></h2>
 <p><%= @patient.notes %></p>
 <%= link_to "Edit", edit_patient_path(@patient) %>
-<%= link_to "Delete", @patient, method: :delete, data: { confirm: "Are you sure?" %>
+<%= link_to "Delete", @patient, method: :delete, data: { confirm: "Are you sure?" }%>
