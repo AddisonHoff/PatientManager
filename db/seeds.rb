@@ -8,3 +8,14 @@
 
 Doctor.create(name: 'John Smith', email: 'johnsmith@gmail.com')
 Doctor.create(name: 'Sally Miller', email: 'sallymiller@gmail.com')
+
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
+Patient.create(name: 'TEST_PATIENT', age: 0, oxygenlevel: 0, email: 'TEST@GMAIL.COM', notes: "NOTES TEST", doctor_id: 1)
