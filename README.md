@@ -2,7 +2,7 @@
 
 A system that allows a patient to report oxygen levels daily to their doctor from home and allows doctors to monitor their patients remotely.
 
-* Rails 6.0.3.4
+Built with Rails 6.0.3.4
 
 # Notes
 * The current version with authentication for patients implemeneted is usable due to a problem with doctor authentication.
