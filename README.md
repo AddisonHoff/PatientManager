@@ -9,6 +9,9 @@ A system that allows a patient to report oxygen levels daily to their doctor fro
 * To demo the app please use this version: https://github.com/AddisonHoff/PatientManager/tree/826d7d86cedaf9d160d95e279c66b6925a4509a1
 * Doctor creation is also bugged, please run db:seed to populate the database with sample doctors. 
 
+![alt text](https://github.com/AddisonHoff/PatientManager/blob/master/Screen%20Shot%202020-12-18%20at%201.59.15%20AM.png)
+![alt text](https://github.com/AddisonHoff/PatientManager/blob/master/Screen%20Shot%202020-12-18%20at%202.00.49%20AM.png)
+
 # How To Run
 
 1. Clone this repo
